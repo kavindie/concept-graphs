@@ -17,7 +17,7 @@ $ pip install torch
 $ pip install torchvision
 $ pip install torchaudio
 $ pip install "git+https://github.com/facebookresearch/pytorch3d.git" #pytorch3d
-$ pip install tyro open_clip_torch wandb h5py openai hydra-core distinctipy ultralytics imageio supervision natsort
+$ pip install tyro open_clip_torch wandb h5py openai hydra-core distinctipy ultralytics imageio supervision==0.11.0 natsort faiss-cpu pyproj
 $ CD go to Grounded SAM and  pip install -e GroundingDINO
 $ export GSA_PATH=/scratch3/kat049/Grounded-Segment-Anything
 export PYTHONPATH=$PYTHONPATH:../Grounded-Segment-Anything/segment_anything/
@@ -31,5 +31,17 @@ $ pip install -q .
 $ cd /content/Grounded-Segment-Anything/segment_anything
 $ pip install -q .
 $ cd /content/Grounded-Segment-Anything
+
+% works
+pip uninstall groundingdino
+git pull
+export AM_I_DOCKER=False
+export BUILD_WITH_CUDA=True
+module load cuda/12.4.0
+pip install --no-build-isolation -e .
+# works in debug (but not regular terminal?)
+
+module load ffmpeg
+pip install imageio[ffmpeg]
 
 ```
