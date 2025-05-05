@@ -116,7 +116,7 @@ def process_cfg(cfg: DictConfig):
 
     return cfg
     
-@hydra.main(version_base=None, config_path="../configs/slam_pipeline", config_name="base")
+@hydra.main(version_base=None, config_path="/scratch3/kat049/concept-graphs/conceptgraph/configs/slam_pipeline", config_name="base")
 def main(cfg : DictConfig):
     cfg = process_cfg(cfg)
     
@@ -137,7 +137,9 @@ def main(cfg : DictConfig):
     
     classes, class_colors = create_or_load_colors(cfg, cfg.color_file_name)
 
-    objects = MapObjectList(device=cfg.device)
+    # objects =MapObjectList(device=cfg.device)
+    objects = MapObjectList()
+
     
     if not cfg.skip_bg:
         # Handle the background detection separately 
