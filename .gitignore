@@ -176,3 +176,6 @@ cfslam/tmp.bash
 cfslam/wandb
 cfslam/tmp.png
 cfslam/temp.json
+
+## my additions
+my_local_data/*
