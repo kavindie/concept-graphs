@@ -1,0 +1,25 @@
+# Main paths
+repo_root: /scratch3/kat049/concept-graphs
+data_root: /scratch3/kat049/concept-graphs/my_local_data
+dataset_root: ${data_root}/KITTI/2011_09_26
+scene_id: 2011_09_26_drive_0019_sync
+
+dataset_config: ${repo_root}/conceptgraph/dataset/dataconfigs/KITTI/KITTI.yaml
+render_camera_path: ${repo_root}/conceptgraph/dataset/dataconfigs/KITTI/KITTI.json
+
+sam_variant: sam # sam
+sam_encoder_version: "vit_h"
+sam_checkpoint_path: /scratch3/kat049/Grounded-Segment-Anything/sam_vit_h_4b8939.pth
+mobile_sam_path: /scratch3/kat049/Grounded-Segment-Anything/mobile_sam.pt
+
+save_video: !!bool True
+save_objects_all_frames: !!bool True
+
+# bg_classes : ["wall", "floor", "ceiling", "sky", "road", "sidewalk"]
+
+save_detections: !!bool True
+force_detection: !!bool True
+
+class_set: ram
+
+classes_file: ${repo_root}/conceptgraph/my_filtered_classes.txt

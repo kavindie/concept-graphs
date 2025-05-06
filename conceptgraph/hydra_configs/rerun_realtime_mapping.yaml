@@ -1,12 +1,13 @@
 defaults:
   - base
   - base_mapping
-  # - replica
-  - record3d
+  # - record3d
   - sam
   - classes
   - logging_level
   - _self_
+  # - replica
+  - KITTI
 
 
 detections_exp_suffix: s_detections_stride10 # helpful label to identify your detections
