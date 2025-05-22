@@ -13,7 +13,7 @@ import cv2
 import json
 import imageio
 import matplotlib
-matplotlib.use("TkAgg")
+# matplotlib.use("TkAgg")
 from matplotlib import pyplot as plt
 import numpy as np
 import pickle
