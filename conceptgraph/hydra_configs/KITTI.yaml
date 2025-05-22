@@ -23,3 +23,7 @@ force_detection: !!bool True
 class_set: ram
 
 classes_file: ${repo_root}/conceptgraph/my_filtered_classes.txt
+
+stride: 1
+exp_suffix: r_mapping_stride1 # helpful label to identify your mapping experiment
+detections_exp_suffix: s_detections_stride1 # helpful label to identify your detections

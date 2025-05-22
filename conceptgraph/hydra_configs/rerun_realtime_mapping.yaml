@@ -7,7 +7,8 @@ defaults:
   - logging_level
   - _self_
   # - replica
-  - KITTI
+  # - KITTI
+  - darpa_p14_fr
 
 
 detections_exp_suffix: s_detections_stride10 # helpful label to identify your detections

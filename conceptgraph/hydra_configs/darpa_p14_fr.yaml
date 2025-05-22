@@ -1,0 +1,29 @@
+# Main paths
+repo_root: /scratch3/kat049/concept-graphs
+data_root: /scratch3/kat049/datasets/DARPA
+dataset_root: ${data_root}
+scene_id: p14_fr
+
+dataset_config: ${repo_root}/conceptgraph/dataset/dataconfigs/darpa_p14_fr/darpa_p14_fr.yaml
+render_camera_path: ${repo_root}/conceptgraph/dataset/dataconfigs/darpa_p14_fr/darpa_p14_fr.json
+
+sam_variant: sam # sam
+sam_encoder_version: "vit_h"
+sam_checkpoint_path: /scratch3/kat049/Grounded-Segment-Anything/sam_vit_h_4b8939.pth
+mobile_sam_path: /scratch3/kat049/Grounded-Segment-Anything/mobile_sam.pt
+
+save_video: !!bool True
+save_objects_all_frames: !!bool False
+
+# bg_classes : ["wall", "floor", "ceiling", "sky", "road", "sidewalk"]
+
+save_detections: !!bool False
+force_detection: !!bool False
+
+class_set: ram
+
+classes_file: ${repo_root}/conceptgraph/my_filtered_classes.txt
+
+stride: 20
+exp_suffix: r_mapping_stride20 # helpful label to identify your mapping experiment
+detections_exp_suffix: s_detections_stride20 # helpful label to identify your detections
