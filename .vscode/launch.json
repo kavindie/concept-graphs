@@ -1,0 +1,48 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "generate_gsa_results",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/conceptgraph/scripts/generate_gsa_results.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--dataset_root",
+                "$/home/concept-graphs/my_local_data/Replica",
+                "--dataset_config",
+                "/home/concept-graphs/conceptgraph/dataset/dataconfigs/replica/replica.yaml",
+                "--scene_id",
+                "room0",
+                "--class_set",
+                "ram",
+                "--stride",
+                "5",
+                -"-box_threshold".
+                "0.2",
+                "--text_threshold",
+                "0.2",
+                "--add_bg_classes",
+                "--accumu_classes",
+                "--exp_suffix",
+                "withbg_allclasses"
+            ],
+            "env": {
+                "PYTHONPATH": "${env:PYTHONPATH}:${workspaceFolder}/Grounded-Segment-Anything/segment_anything/",
+                "CG_FOLDER": "/home/concept-graphs/",
+            },
+            "cwd": "${workspaceFolder}/conceptgraph"
+        }
+    ]
+
+}
