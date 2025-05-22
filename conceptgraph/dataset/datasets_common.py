@@ -1120,6 +1120,10 @@ def get_dataset(dataconfig, basedir, sequence, **kwargs):
         return MultiscanDataset(config_dict, basedir, sequence, **kwargs)
     elif config_dict['dataset_name'].lower() in ['hm3d']:
         return Hm3dDataset(config_dict, basedir, sequence, **kwargs)
+    elif config_dict["dataset_name"].lower() in ["kitti"]:
+        return ReplicaDataset(config_dict, basedir, sequence, **kwargs)
+    elif config_dict["dataset_name"].lower() in ["darpa_p14_fr"]:
+        return ReplicaDataset(config_dict, basedir, sequence, **kwargs)
     else:
         raise ValueError(f"Unknown dataset name {config_dict['dataset_name']}")
 
